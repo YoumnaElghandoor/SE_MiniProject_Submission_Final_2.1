@@ -1,0 +1,23 @@
+<% include header %>
+<%if((currentUser)&&(currentUser.id === user.id)){%>  
+  <a href="/edit" class="pull-right">Edit your profile</a>
+<%}%>
+
+<h1><%=user.name()%></h1>
+<h2>Joined on <%= user.createdAt %></h2>
+<%if(user.bio){%>
+  <p><%=user.bio%></p>
+<%}%>
+
+
+<%for(var i = 0; i < user.images.length; i++){%>
+    <li class="timeline-yellow">
+        <div class="timeline-time">
+            <img src="../<%=currentUser.images[i]%>" alt="image not found" style="width:150px;height:150px;">
+        </div>
+    </li>
+    <%}%>
+
+
+
+<% include footer %>

@@ -1,0 +1,21 @@
+<% include header %>
+<h1>Sign up</h1>
+<form  method="post" enctype='multipart/form-data' >
+  <input name="username" type="text" class="form-control" 
+placeholder="Username" required autofocus>
+  <input name="password" type="password" class="form-control" 
+placeholder="Password" required>
+</br>
+<div class="form-group" id="student">
+<label class="radio-inline"><input type="radio" name="optradio" value="1">Student </label>
+<label class="radio-inline"><input type="radio" name="optradio" value="0">Client </label>
+</div>
+
+ <input type='file' name='upl1'/>
+  <input type="submit"  name ="submit" value="submit" class="btn btn-primary btn-block" />
+</form>
+
+
+
+
+<% include footer %>

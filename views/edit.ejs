@@ -1,0 +1,18 @@
+<% include header %>
+<h1>Edit your profile</h1>
+<form action="/edit" method="post">
+  <input name="displayname" type="text" class="form-control"
+
+ placeholder="Display name"
+
+ value="<%= currentUser.displayName || "" %>">
+  <textarea name="bio" class="form-control"
+
+ placeholder="Let the people discover you awesomeness!">
+
+ <%= currentUser.bio || "" %></textarea>
+  <input type="submit" value="Update" class="btn
+
+ btn-primary btn-block">
+</form>
+<% include footer %>
