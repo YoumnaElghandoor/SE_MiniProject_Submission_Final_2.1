@@ -1,17 +1,25 @@
 <% include header %>
-<h1>Welcome to Portfolio!</h1>
-<% users.forEach(function(user) { %>
+<h1><em> Share Your Creativity ,</em> influence people !</h1>
+<p>
+<form action="/" method="get" class="form-inline">
+<div class="form-group">
+  <input type="text" name="search"  placeholder="Search Portfolio..." class="form-control"/>
+   <input type="submit"  name ="submit" value="Search" class="btn btn-default" />
+   </div>
+</form>
+</p>
+<% users.forEach(function(user) {%>
   <div class="panel panel-default">
     <div class="panel-heading">
       <a href="/users/<%= user.username %>">
         <%= user.name() %>
       </a>
-        <img src="<%=user.image%>" alt="image not found" style="width:150px;height:150px;">
+        <img src="<%=user.image%>" alt="No Profile pic yet " class="img-circle" style="width:150px;height:150px;">
     </div>
     <%if(user.bio){%>
       <div class="panel-body"><%= user.bio %></div>
     <%}%>    
   </div>
 <% }) %>
-
 <% include footer %>
+

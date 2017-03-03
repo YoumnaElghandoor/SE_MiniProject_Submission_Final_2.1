@@ -1,0 +1,25 @@
+  
+<% include header %>
+
+   <% users.forEach(function(user) {%>
+   <div>
+     <%for(var i = 0; i < user.images.length; i++){%>
+        <div class="timeline-time">
+        <%if(user.images[i].includes(global.str)){%>
+           <img src="../<%=user.images[i]%>" alt="image not found" class="img-rounded"  style="width:150px;height:150px;">
+         <%}%>
+           
+        </div> 
+    <%}%>
+    </div>
+ <div>
+      <%for(var i = 0; i<user.links.length; i++){%>
+        <div class="timeline-time">
+        <%if(user.links[i].includes(global.str)){%>
+             <p><%=user.links[i]%></p>
+         <%}%>   
+        </div> 
+    <%}%>
+    </div>
+<%})%>
+    <% include footer %>

@@ -3,20 +3,43 @@
   <a href="/edit" class="pull-right">Edit your profile</a>
 <%}%>
 
-<h1><%=user.name()%></h1>
-<h2>Joined on <%= user.createdAt %></h2>
+<h1><em><%=user.name()%></em></h1>
+<p class="text-muted" ><em>Joined on <%= user.createdAt %></em></p>
 <%if(user.bio){%>
-  <p><%=user.bio%></p>
+<dl>
+
+  <h3><em>Bio : </em></h3>
+<div class="well" > <p class="text-danger"><%=user.bio%></p></div>
+  </dl>
 <%}%>
-
-
-<%for(var i = 0; i < user.images.length; i++){%>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3 class="text-primary"><em>Images :</em></h3>
+      <%for(var i = 0; i < user.images.length; i++){%>
     <li class="timeline-yellow">
         <div class="timeline-time">
-            <img src="../<%=currentUser.images[i]%>" alt="image not found" style="width:150px;height:150px;">
+            <img src="../<%=user.images[i]%>" alt="image not found" class="img-rounded"  style="width:150px;height:150px;">
+
         </div>
     </li>
     <%}%>
+     </div>
+    <div class="col-sm-4">
+    </br>
+    
+      <h4 class="text-primary"><em>Links</em></h4>
+    <%for(var i = 0; i < user.links.length; i++){%>
+    <li class="timeline-yellow">
+        <div class="timeline-time">
+          <p><%=user.links[i]%></p>
+        </div>
+    </li>
+    <%}%>
+
+    </div>
+  </div>
+</div>
 
 
 

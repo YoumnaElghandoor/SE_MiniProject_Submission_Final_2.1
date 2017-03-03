@@ -1,17 +1,24 @@
 <% include header %>
 <h1>Sign up</h1>
+
 <form  method="post" enctype='multipart/form-data' >
+<div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
   <input name="username" type="text" class="form-control" 
 placeholder="Username" required autofocus>
+</div>
+ <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
   <input name="password" type="password" class="form-control" 
 placeholder="Password" required>
+ </div>
 </br>
 <div class="form-group" id="student">
 <label class="radio-inline"><input type="radio" name="optradio" value="1">Student </label>
 <label class="radio-inline"><input type="radio" name="optradio" value="0">Client </label>
+<h2><em>Upload Your first portfolio (required) :</em></h2></br>
+<input type='file' name='upl1' required />
 </div>
-
- <input type='file' name='upl1'/>
   <input type="submit"  name ="submit" value="submit" class="btn btn-primary btn-block" />
 </form>
 

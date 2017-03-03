@@ -1,31 +1,43 @@
+<html>
+<style>
+.navbarnavbar-defaultnavbar-static-top{
+    color: white;
+    background-color: ADD8E6;
+}
+</style>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Portfolio</title>
+<title>PORTFOLIO</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-<div class="navbar navbar-default navbar-static-top" role="navigation">
+
+<div class="navbarnavbar-defaultnavbar-static-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">Portfolio
+
+      <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-briefcase"></span> PORTFOLIO
       </a>
     </div>
-    <ul class="nav navbar-nav navbar-right">     
+    <ul class="nav navbar-nav navbar-right"> 
+
       <% if (currentUser) { %>                   
         <li>                                     
-          <a href="/edit">                       
+          <a href="/edit"><span class="glyphicon glyphicon-user">                     
             Hello, <%= currentUser.name() %> 
-            <li><a href="/create-portfolio">upload work</a></li>      
+            <li><a href="/create-portfolio">upload Image</a></span></li> 
+            <li><a href="/work-link">upload link</a></span></li>       
           </a>                                   
         </li>                                    
-        <li><a href="/logout">Log out</a></li>   
+        <li><a href="/logout">Log out</a></li> </br>  
       <% } else { %>   
                                   
-        <li><a href="/login">Log in</a></li>     
-        <li><a href="/signup">Sign up</a></li>   
+        <li><a href="/login">Log in</a></li>    
+        <li><a href="/signup">Sign up</a></li>  
       <% } %>                                    
     </ul>                                        
   </div>
@@ -41,3 +53,5 @@
       <%= info %>
     </div>
   <% }) %>
+
+

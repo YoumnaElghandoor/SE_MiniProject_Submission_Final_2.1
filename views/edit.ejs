@@ -1,15 +1,20 @@
 <% include header %>
-<h1>Edit your profile</h1>
+
+<h1><em>Edit your profile</em></h1>
+  <li><a href="/Profile-pic">upload Profile Picture</a></span></li> 
 <form action="/edit" method="post">
+   <p><em>Add a nickname : </em?</p>
   <input name="displayname" type="text" class="form-control"
 
  placeholder="Display name"
 
  value="<%= currentUser.displayName || "" %>">
+
+  <p><em>About You : </em?</p>
   <textarea name="bio" class="form-control"
 
- placeholder="Let the people discover you awesomeness!">
-
+ placeholder="">
+ 
  <%= currentUser.bio || "" %></textarea>
   <input type="submit" value="Update" class="btn
 
